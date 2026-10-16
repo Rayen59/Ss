@@ -1,0 +1,6 @@
+{
+  "name": "AeroWatch OS - Smartwatch & Ami IA Compagnon",
+  "description": "Plateforme d'écosystème Smartwatch connectée avec contrôle intégral du téléphone, ami vocal IA intelligent, alertes d'urgence autonomes et suivi de santé.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
