@@ -181,9 +181,9 @@ app.post('/api/ai/advisor', async (req, res) => {
   }
 });
 
-// Start Server: In Production (Railway, Render, Docker), serve static dist; In dev, mount Vite
+// Start Server: In Production (Render, Railway, Docker), serve static dist; In dev, mount Vite
 async function startServer() {
-  const isProduction = process.env.NODE_ENV === 'production' || process.env.RAILWAY_ENVIRONMENT !== undefined;
+  const isProduction = process.env.NODE_ENV === 'production' || process.env.RAILWAY_ENVIRONMENT !== undefined || process.env.RENDER !== undefined;
   const distPath = path.resolve(__dirname, 'dist');
   const distExists = fs.existsSync(distPath);
 

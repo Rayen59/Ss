@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: aerowatch-os
+    env: node
+    plan: free
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: NODE_ENV
+        value: production
+      - key: NPM_CONFIG_LEGACY_PEER_DEPS
+        value: "true"
+      - key: GEMINI_API_KEY
+        sync: false
